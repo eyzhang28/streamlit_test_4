@@ -164,4 +164,3 @@ if st.button("Run Script"):
      df = pd.read_csv(print_data)
      st.write(df['Password'].iloc[0])
      df2 = pd.read_excel(state_data)
-     st.write(df2['Alabama'].iloc[47])
