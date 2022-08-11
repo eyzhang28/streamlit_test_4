@@ -165,11 +165,3 @@ if st.button("Run Script"):
      st.write(df['Password'].iloc[0])
      df2 = pd.read_csv(state_data)
      df2 = df2.drop([2,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,43,44,45])
-     df2_transposed = df2.T
-     df3 = df2_transposed.reset_index(drop = True)
-     df3.columns = df3.iloc[1]
-     df3 = df3.drop([0,1])
-     df3 = df3.rename(columns = {'FIPS': 'Abbreviation_list'})
-     df4 = pd.merge(df3, df, on = 'Abbreviation_list', how = 'outer')
-     df4 = df4.iloc[:-2 , :]
-     st.write(df4['Abbreviation'].iloc[0])
