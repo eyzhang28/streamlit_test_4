@@ -17,7 +17,7 @@ st.write('Please upload the proofs in the first uploader and the State Contact S
 
 proofs_data = st.file_uploader("Upload Proofs PDF", type=["pdf"])
 state_data = st.file_uploader("Upload the State Contact Info Sheet")
-print_datas = st.file_uploader("Upload Print Files", type=["csv"])
+print_data = st.file_uploader("Upload Print Files", type=["csv"])
 
 
 total_lines = []
