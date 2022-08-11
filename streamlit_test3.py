@@ -169,6 +169,6 @@ if st.button("Run Script"):
      df3 = df2_transposed.reset_index(drop = True)
      df3.columns = df3.iloc[1]
      df3 = df3.drop([0,1])
-     df3 = df3.drop([21:])
+     df3 = df3.drop([21:80])
      st.write(df3)
      st.write(df3.columns)
