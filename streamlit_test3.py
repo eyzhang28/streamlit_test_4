@@ -172,4 +172,4 @@ if st.button("Run Script"):
      df3 = df3.rename(columns = {'FIPS': 'Abbreviation_list'})
      df4 = pd.merge(df3, df, on = 'Abbreviation_list', how = 'outer')
      df4 = df4.iloc[:-2 , :]
-     st.write(df4['Abbreviation'].iloc[0]
+     st.write(df4['Abbreviation'].iloc[0])
