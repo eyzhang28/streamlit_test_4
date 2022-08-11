@@ -161,36 +161,3 @@ def compare_dict(df6, proofs_dictionary):
 
 if st.button("Run Script"):
      st.write("test")
-     total_lines = []
-     for print_data in print_datas:
-          for line in print_data:
-               line = str(line[:-2])
-               total_lines = total_lines + line
-     UI_Number_list = []
-     Trade_Name_list = []
-     Legal_Name_list = []
-     Mail_Address_1_list = []
-     Mail_Address_2_list = []
-     BMA_City_list = []
-     BMA_State_list = []
-     Abbreviation_list = []
-     BMA_Area_Code_1_list = []
-     BMA_Area_Code_2_list = []
-     Web_ID_list = []
-     Password_list = []
-     for line in total_lines:
-         UI_Number_list.append(line[2:12])
-         Trade_Name_list.append(line[47:117])
-         Legal_Name_list.append(line[12:47])
-         Mail_Address_1_list.append(line[117:152])
-         Mail_Address_2_list.append(line[152:187])
-         BMA_City_list.append(line[187:217])
-         BMA_State_list.append(line[217:219])
-         Abbreviation_list.append(line[0:2])
-         BMA_Area_Code_1_list.append(line[219:224])
-         BMA_Area_Code_2_list.append(line[224:228])
-         Web_ID_list.append(line[228:230] + line[228:238] )
-         Password_list.append(line[240:248])
-     d = {'UI_Number': UI_Number_list, 'Trade_Name': Trade_Name_list, 'Legal_Name': Legal_Name_list, 'Mail_Address_1': Mail_Address_1_list, 'Mail_Address_2': Mail_Address_2_list, 'BMA_City': BMA_City_list, 'BMA_State': BMA_State_list, 'Abbreviation_list': Abbreviation_list, 'BMA_Area_Code_1': BMA_Area_Code_1_list, 'BMA_Area_Code_2': BMA_Area_Code_2_list, 'Web_ID': Web_ID_list, 'Password': Password_list}
-     df = pd.DataFrame(d)
-     st.write(df["UI_Number"].iloc[0])
