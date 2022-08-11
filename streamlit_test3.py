@@ -169,7 +169,5 @@ if st.button("Run Script"):
      df3 = df2_transposed.reset_index(drop = True)
      df3.columns = df3.iloc[1]
      df3 = df3.drop([0,1])
-     for i in range(5):
-          df3 = df3.drop([21, 22, 23, 24])
-     st.write(df3)
-     st.write(df3.columns)
+     df3 = df3.rename(columns = {'FIPS': 'Abbreviation_list'})
+     df4 = pd.merge(df3, df, on = 'Abbreviation_list', how = 'outer')
