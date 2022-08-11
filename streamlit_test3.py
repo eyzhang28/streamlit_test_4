@@ -16,7 +16,7 @@ notice = st.selectbox(
 st.write('Please upload the proofs in the first uploader and the State Contact Shet in the second uploader')
 
 proofs_data = st.file_uploader("Upload Proofs PDF", type=["pdf"])
-state_data = st.file_uploader("Upload the State Contact Info Sheet", type = ["xlsx"])
+state_data = st.file_uploader("Upload the State Contact Info Sheet", type = ["csv"])
 print_data = st.file_uploader("Upload Print Files", type=["csv"])
 
 
