@@ -163,3 +163,5 @@ if st.button("Run Script"):
      st.write("test")
      df = pd.read_csv(print_data)
      st.write(df['Password'].iloc[0])
+     df2 = pd.read_excel(state_data)
+     st.write(df2)
